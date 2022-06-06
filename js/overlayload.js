@@ -15,3 +15,7 @@ function myload(url) {
 	$("#exp-over").load(url);
 	$('#exp-over').css("display", "block");
 }
+
+function close() {
+	$('#exp-over').css("display", "none");
+}

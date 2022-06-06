@@ -13,9 +13,9 @@ function open_url(type, url, data, target) {
 
 function myload(url) {	
 	$("#exp-over").load(url);
-	$('#exp-over').css("display", "block");
+	$("#exp-over").css("display", "block");
 }
 
-function close() {
-	$('#exp-over').css("display", "none");
+function closeOverlay() {
+	$("#exp-over").css("display", "none");
 }

@@ -48,18 +48,17 @@ h1, h2, h3, h4, h5, h6 {
 /* new */
 .experience-overlay {
   font-family: 'Noto Sans KR', sans-serif;
+  color:#a84cb8;
   font-weight: 400;
   z-index: 3000;
   position: fixed;
   bottom: 0;
-  top: 10%;
-  left: 10%;
-  right: 10%;
+  top: 0%;
+  left: 0%;
+  right: 0%;
   height: 100%;
   background: rgba(0, 0, 0, .7); }
-  div {
-    border-radius: 5%;
-  }
+
 
 figure {
   margin-bottom: 2.5em;

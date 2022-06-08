@@ -42,6 +42,5 @@ $("button[id='test']").click(function() {
 	let curURL = $(window.location)[0].href;
 	let lastIndex = curURL.lastIndexOf("/");
 	let loadURL = curURL.substring(0, lastIndex + 1) + url;
-	window.history.pushState(null, null, url);
-	location.reload();
+	window.history.pushState(null, null, url);	
 })

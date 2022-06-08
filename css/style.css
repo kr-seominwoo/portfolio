@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* new */
-.experience-overlay {
+.project-overlay {
   font-family: 'Noto Sans KR', sans-serif;
   color:#a84cb8;
   font-weight: 400;
@@ -228,7 +228,7 @@ figure {
         display: inline;
         list-style: none; }
         #colorlib-aside .colorlib-footer ul li a {
-          color: rgba(255, 255, 255, 0.3);
+          color: rgba(0, 0, 0, 0.5);
           padding: 4px; }
           #colorlib-aside .colorlib-footer ul li a:hover, #colorlib-aside .colorlib-footer ul li a:active, #colorlib-aside .colorlib-footer ul li a:focus {
             text-decoration: none;

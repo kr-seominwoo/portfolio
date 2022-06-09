@@ -1,15 +1,15 @@
-function open_url(type, url, data, target) {
-	$('#exp-over').css("display", "block");
-	$.ajax({
-		type: type,
-		url: url,
-		data: data,
-		dataType:"jsonp",
-		success: function(data) {
-			$("#" + target).html(data);
-		}
-	})
-}
+// function open_url(type, url, data, target) {
+// 	$('#exp-over').css("display", "block");
+// 	$.ajax({
+// 		type: type,
+// 		url: url,
+// 		data: data,
+// 		dataType:"jsonp",
+// 		success: function(data) {
+// 			$("#" + target).html(data);
+// 		}
+// 	})
+// }
 
 
 // function myload(url) {	
@@ -35,6 +35,11 @@ function myload(url) {
 
 
 function closeOverlay() {
+	let curURL = $(window.location)[0].href;
+	let lastIndex = curURL.lastIndexOf("/");
+	let url = curURL.substring(0, lastIndex);
+
+	window.history.pushState(null, null, url);
 	$(".project-overlay").css("display", "none");
 }
 

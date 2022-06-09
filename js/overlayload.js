@@ -47,7 +47,8 @@ function closeOverlay() {
 // 	window.history.pushState(null, null, loadURL);
 // })
 
-$("a[id='overlay-workTest']").click(function(event) {
+$("a[name='overlay-workTest']").click(function(event) {
+	console.log(event);
 	event.preventDefault();
 	console.log("hello");
 	let url = "project-overlay.html";

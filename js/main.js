@@ -290,14 +290,16 @@
 		
 		if (specialIndex != -1) {
 			let url = curURL.replace("#", "");
+			console.log(url);
 			myload(url);
-		}
-		
+		} else {
+			console.log('hello');
+		}		
 	}
 
 	// Document on load.
 	$(function(){
-		
+		checkOverlay();
 
 		fullHeight();
 		counter();
@@ -316,7 +318,7 @@
 		stickyFunction();
 		owlCrouselFeatureSlide();
 		
-		checkOverlay();
+		
 	});
 
 

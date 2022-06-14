@@ -13,7 +13,7 @@ function closeOverlay() {
 	$(".project-overlay").css("display", "none");
 }
 
-$("a[name='overlay-workTest']").click(function(event) {
+$("a[name='overlay-projectTest']").click(function(event) {
 	event.preventDefault();
 	let url = "project-overlay.html";
 	let curURL = $(window.location)[0].href;

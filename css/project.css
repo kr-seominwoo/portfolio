@@ -36,7 +36,6 @@
     justify-content: center;
 }
 
-
 .project-img:hover .controller {
     visibility: visible;
 }
@@ -67,17 +66,8 @@
     
 }
 
-.project-box .project-discript h2 {
-    font-size: 18px;
-    color: #000;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 400;
-    margin: 5px;
-    border-bottom: solid 1px black;
-}
-
 .project-box .project-discript p {
-    font-size: 10px;
+    font-size: 20px;
     margin: 5px;
 }
 

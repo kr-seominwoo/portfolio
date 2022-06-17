@@ -52,7 +52,7 @@ function closeOverlay() {
 	window.history.pushState(null, null, url);
 	$(".project-overlay").css("display", "none");
 	$("#colorlib-page").removeClass("hidden");
-	$('html').animate({scrollTop : scrollValue}, 400);
+	$('html').animate({scrollTop : scrollValue}, 10);
 
 }
 

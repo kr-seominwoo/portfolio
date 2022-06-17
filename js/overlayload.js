@@ -37,7 +37,7 @@ var contentWayPoint = function() {
 function myload(url) {	
 	$(".project-overlay").load(url, contentWayPoint);
 	$(".project-overlay").css("display", "block");
-	// setTimeout(contentWayPoint, 300);
+	$("#colorlib-page").addClass("hidden");
 }
 
 
@@ -48,6 +48,7 @@ function closeOverlay() {
 
 	window.history.pushState(null, null, url);
 	$(".project-overlay").css("display", "none");
+	$("#colorlib-page").removeClass("hidden");
 }
 
 $("a[name='overlay-projectTest']").click(function(event) {

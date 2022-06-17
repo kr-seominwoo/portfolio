@@ -37,7 +37,7 @@ var contentWayPoint = function() {
 function myload(url) {	
 	$(".project-overlay").load(url);
 	$(".project-overlay").css("display", "block");
-	setTimeout(contentWayPoint, 10);
+	setTimeout(contentWayPoint, 100);
 }
 
 

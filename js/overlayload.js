@@ -1,6 +1,7 @@
 function myload(url) {	
 	$(".project-overlay").load(url);
 	$(".project-overlay").css("display", "block");
+	contentWayPoint();
 }
 
 
@@ -15,7 +16,7 @@ function closeOverlay() {
 
 $("a[name='overlay-projectTest']").click(function(event) {
 	event.preventDefault();
-	let url = "project-overlay.html";
+	let url = "/project/project-overlay.html";
 	let curURL = $(window.location)[0].href;
 	let lastIndex = curURL.lastIndexOf("/");
 

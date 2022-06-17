@@ -1,43 +1,43 @@
-// var projectContentWayPoint = function() {
-// 	var i = 0;
-// 	$('.animate-box').waypoint( function( direction ) {
+var contentWayPoint = function() {
+	var i = 0;
+	$('.animate-box').waypoint( function( direction ) {
 
-// 		if( direction === 'down' && !$(this.element).hasClass('animated') ) {
+		if( direction === 'down' && !$(this.element).hasClass('animated') ) {
 			
-// 			i++;
+			i++;
 
-// 			$(this.element).addClass('item-animate');
-// 			setTimeout(function(){
+			$(this.element).addClass('item-animate');
+			setTimeout(function(){
 
-// 				$('body .animate-box.item-animate').each(function(k){
-// 					var el = $(this);
-// 					setTimeout( function () {
-// 						var effect = el.data('animate-effect');
-// 						if ( effect === 'fadeIn') {
-// 							el.addClass('fadeIn animated');
-// 						} else if ( effect === 'fadeInLeft') {
-// 							el.addClass('fadeInLeft animated');
-// 						} else if ( effect === 'fadeInRight') {
-// 							el.addClass('fadeInRight animated');
-// 						} else {
-// 							el.addClass('fadeInUp animated');
-// 						}
+				$('body .animate-box.item-animate').each(function(k){
+					var el = $(this);
+					setTimeout( function () {
+						var effect = el.data('animate-effect');
+						if ( effect === 'fadeIn') {
+							el.addClass('fadeIn animated');
+						} else if ( effect === 'fadeInLeft') {
+							el.addClass('fadeInLeft animated');
+						} else if ( effect === 'fadeInRight') {
+							el.addClass('fadeInRight animated');
+						} else {
+							el.addClass('fadeInUp animated');
+						}
 
-// 						el.removeClass('item-animate');
-// 					},  k * 200, 'easeInOutExpo' );
-// 				});
+						el.removeClass('item-animate');
+					},  k * 200, 'easeInOutExpo' );
+				});
 				
-// 			}, 100);
+			}, 100);
 			
-// 		}
+		}
 
-// 	} , { offset: '85%' } );
-// };
+	} , { offset: '85%' } );
+};
 
 function myload(url) {	
 	$(".project-overlay").load(url);
 	$(".project-overlay").css("display", "block");
-	// setTimeout(projectContentWayPoint, 500);
+	setTimeout(contentWayPoint, 500);
 }
 
 
@@ -52,7 +52,7 @@ function closeOverlay() {
 
 $("a[name='overlay-projectTest']").click(function(event) {
 	event.preventDefault();
-	let url = "project-overlay.html";
+	let url = "/project/project-overlay.html";
 	let curURL = $(window.location)[0].href;
 	let lastIndex = curURL.lastIndexOf("/");
 

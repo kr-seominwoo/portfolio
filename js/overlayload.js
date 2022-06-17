@@ -37,7 +37,7 @@ var contentWayPoint = function() {
 function myload(url) {	
 	$(".project-overlay").load(url);
 	$(".project-overlay").css("display", "block");
-	setTimeout(contentWayPoint, 500);
+	// setTimeout(contentWayPoint, 500);
 }
 
 
@@ -52,7 +52,7 @@ function closeOverlay() {
 
 $("a[name='overlay-projectTest']").click(function(event) {
 	event.preventDefault();
-	let url = "project/project-overlay.html";
+	let url = "project-overlay.html";
 	let curURL = $(window.location)[0].href;
 	let lastIndex = curURL.lastIndexOf("/");
 
@@ -61,3 +61,7 @@ $("a[name='overlay-projectTest']").click(function(event) {
 	let loadURL = curURL.substring(0, lastIndex + 1) + "#" + url;
 	window.history.pushState(null, null, loadURL);
 })
+
+$(function(){
+	contentWayPoint();
+});

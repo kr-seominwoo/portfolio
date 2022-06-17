@@ -37,7 +37,7 @@ var contentWayPoint = function() {
 function myload(url) {	
 	$(".project-overlay").load(url);
 	$(".project-overlay").css("display", "block");
-	// setTimeout(contentWayPoint, 500);
+	setTimeout(contentWayPoint, 10);
 }
 
 
@@ -61,7 +61,3 @@ $("a[name='overlay-projectTest']").click(function(event) {
 	let loadURL = curURL.substring(0, lastIndex + 1) + "#" + url;
 	window.history.pushState(null, null, loadURL);
 })
-
-$(function(){
-	contentWayPoint();
-});

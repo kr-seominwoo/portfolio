@@ -1,4 +1,4 @@
-var contentWayPoint = function() {
+var projectContentWayPoint = function() {
 	var i = 0;
 	$('.animate-box').waypoint( function( direction ) {
 
@@ -37,7 +37,7 @@ var contentWayPoint = function() {
 function myload(url) {	
 	$(".project-overlay").load(url);
 	$(".project-overlay").css("display", "block");
-	contentWayPoint();
+	setTimeout(projectContentWayPoint, 500);
 }
 
 

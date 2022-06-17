@@ -1,0 +1,123 @@
+.project-footer {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.project-footer i {
+    color: rgba(0,0,0,0.5);
+}
+
+.project-footer i:hover {
+    color: #2c98f0;
+}
+
+.project-overlay h2 {
+    text-align: center;
+    margin-top: 30px;
+    font-family: "Quicksand", Arial, sans-serif;
+}
+
+.project-box {
+    margin: 10px;
+    display: flex;  
+    flex-wrap: nowrap; 
+    justify-content: center;
+}
+
+.project-box > .project-img {
+    position: relative;
+    display: flex;
+    width: 45%;
+    height: 50%;
+    margin: 3px;
+    padding: 5px 0px 5px 10px;
+    
+    justify-content: center;
+}
+
+
+.project-img:hover .controller {
+    visibility: visible;
+}
+
+.project-img span  {
+    position: relative;
+    display: flex;
+}
+
+.project-img img {
+    /* position: relative; */
+    border-radius: 30px ;
+    width: 75%;
+    /* top:0%; */
+    box-shadow: 2px 2px 2px 2px black;
+}
+
+.project-box .project-discript {
+    /* display: flex; */
+    background: #f2f3f7;
+    /* float:left; */
+    border-radius: 30px ;
+    width: 45%;
+    height: fit-content;
+    margin: 10px;
+    padding: 5px 0px 5px 10px;
+    box-shadow: 1px 1px 1px 1px black;
+    
+}
+
+.project-box .project-discript h2 {
+    font-size: 18px;
+    color: #000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    margin: 5px;
+    border-bottom: solid 1px black;
+}
+
+.project-box .project-discript p {
+    font-size: 10px;
+    margin: 5px;
+}
+
+.controller {
+    visibility: hidden;
+    display:flex;
+    align-items: center;
+}
+
+.controller span {
+    /* position: absolute; */
+    /* display:flex; */
+    background-color: transparent;
+    color: #999999;
+    /* text-align: center; */
+    border-radius: 50%;
+    padding: 10px 20px;
+    align-items: center;
+    font-size: x-large;
+
+    cursor: pointer;
+  }
+   /* 이전, 다음 화살표에 마우스 커서가 올라가 있을때 /
+  .controller span:hover {
+    background-color: rgba(128, 128, 128, 0.11);
+  }
+  .prev {
+    left: 10px;
+  } / 이전 화살표에 마우스 커서가 올라가 있을때 이전 화살표가 살짝 왼쪽으로 이동하는 효과/
+  */
+  .prev:hover {
+    /* transform: translateX(-10px); */
+    color: #2c98f0;
+  }
+  /* .next {
+    right: 10px;
+  } / 다음 화살표에 마우스 커서가 올라가 있을때 이전 화살표가 살짝 오른쪽으로 이동하는 효과*/ 
+  .next:hover {
+    /* transform: translateX(10px); */
+    color: #2c98f0;
+  }
+
+  

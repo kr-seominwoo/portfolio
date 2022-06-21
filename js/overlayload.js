@@ -112,9 +112,10 @@ function closeOverlay() {
 	$("#colorlib-page").removeClass("hidden");
 	clickMenu();
 	navigationSection();
-	setInterval(function() {
-		$('a[data-nav-section="project"').click();
-	}, 100);	
+	$('a[data-nav-section="project"').click();
+	// setInterval(function() {
+	// 	$('a[data-nav-section="project"').click();
+	// }, 100);	
 }
 
 $("a[name='overlay-projectTest']").click(function(event) {

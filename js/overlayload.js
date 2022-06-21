@@ -70,6 +70,29 @@ var navigationSection = function() {
 
 };
 
+var clickMenu = function() {
+
+	$('#navbar a:not([class="external"])').click(function(event){
+		var section = $(this).data('nav-section'),
+			navbar = $('#navbar');
+
+			if ( $('[data-section="' + section + '"]').length ) {
+				$('html, body').animate({
+					scrollTop: $('[data-section="' + section + '"]').offset().top - 55
+				}, 500);
+		   }
+
+		if ( navbar.is(':visible')) {
+			navbar.removeClass('in');
+			navbar.attr('aria-expanded', 'false');
+			$('.js-colorlib-nav-toggle').removeClass('active');
+		}
+
+		event.preventDefault();
+		return false;
+	});
+};
+
 function myload(url) {	
 	// scrollValue = $(document).scrollTop(); 
 	$(".project-overlay").load(url, contentWayPoint);
@@ -87,10 +110,11 @@ function closeOverlay() {
 	window.history.pushState(null, null, url);
 	$(".project-overlay").addClass("hidden");
 	$("#colorlib-page").removeClass("hidden");
-	// $('html').animate({scrollTop : scrollValue}, 10);	
-	navActive("project");
-	setTimeout(navigationSection, 50);
-	// navigationSection();	
+	clickMenu();
+	navigationSection();
+	setInterval(function() {
+		$('a[data-nav-section="project"').click();
+	}, 100);	
 }
 
 $("a[name='overlay-projectTest']").click(function(event) {

@@ -89,7 +89,7 @@ function closeOverlay() {
 	$("#colorlib-page").removeClass("hidden");
 	// $('html').animate({scrollTop : scrollValue}, 10);	
 	navActive("project");
-	navigationSection();	
+	// navigationSection();	
 }
 
 $("a[name='overlay-projectTest']").click(function(event) {

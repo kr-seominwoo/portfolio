@@ -1,4 +1,4 @@
-var scrollValue;
+// var scrollValue;
 
 var contentWayPoint = function() {
 	var i = 0;
@@ -36,11 +36,47 @@ var contentWayPoint = function() {
 	} , { offset: '85%' } );
 };
 
+// Reflect scrolling in navigation
+var navActive = function(section) {
+
+	var $el = $('#navbar > ul');
+	$el.find('li').removeClass('active');
+	$el.each(function(){
+		$(this).find('a[data-nav-section="'+section+'"]').closest('li').addClass('active');
+	});
+
+};
+
+var navigationSection = function() {
+
+	var $section = $('section[data-section]');
+	
+	$section.waypoint(function(direction) {
+		
+		if (direction === 'down') {
+			navActive($(this.element).data('section'));
+		}
+	}, {
+		offset: '150px'
+	});
+
+	$section.waypoint(function(direction) {
+		if (direction === 'up') {
+			navActive($(this.element).data('section'));
+		}
+	}, {
+		offset: function() { return -$(this.element).height() + 155; }
+	});
+
+};
+
 function myload(url) {	
-	scrollValue = $(document).scrollTop(); 
+	// scrollValue = $(document).scrollTop(); 
 	$(".project-overlay").load(url, contentWayPoint);
-	$(".project-overlay").css("display", "block");
+	// $(".project-overlay").("display", "block");
+	$(".project-overlay").removeClass("hidden");
 	$("#colorlib-page").addClass("hidden");
+	navActive("project");
 }
 
 
@@ -50,14 +86,15 @@ function closeOverlay() {
 	let url = curURL.substring(0, lastIndex);
 
 	window.history.pushState(null, null, url);
-	$(".project-overlay").css("display", "none");
+	$(".project-overlay").addClass("hidden");
 	$("#colorlib-page").removeClass("hidden");
-	$('html').animate({scrollTop : scrollValue}, 10);
-
+	// $('html').animate({scrollTop : scrollValue}, 10);
+	navigationSection();
 }
 
 $("a[name='overlay-projectTest']").click(function(event) {
 	event.preventDefault();
+	console.log('url :' + event.target.href);
 	let url = "project-overlay.html";
 	let curURL = $(window.location)[0].href;
 	let lastIndex = curURL.lastIndexOf("/");

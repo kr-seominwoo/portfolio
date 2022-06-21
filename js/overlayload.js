@@ -1,5 +1,3 @@
-// var scrollValue;
-
 var contentWayPoint = function() {
 	var i = 0;
 	$('.animate-box').waypoint( function( direction ) {
@@ -71,7 +69,6 @@ var navigationSection = function() {
 };
 
 function myload(url) {	
-	// scrollValue = $(document).scrollTop(); 
 	$(".project-overlay").load(url, contentWayPoint);
 	$(".project-overlay").removeClass("hidden");
 	$("#colorlib-page").addClass("hidden");
@@ -103,17 +100,3 @@ $("a[name='overlay-projectTest']").click(function(event) {
 	let loadURL = curURL.substring(0, lastIndex + 1) + "#" + url;
 	window.history.pushState(null, null, loadURL);
 })
-
-// original
-// $("a[name='overlay-projectTest']").click(function(event) {
-// 	event.preventDefault();
-// 	console.log('url :' + event.target.href);
-// 	let url = "project-overlay.html";
-// 	let curURL = $(window.location)[0].href;
-// 	let lastIndex = curURL.lastIndexOf("/");
-
-// 	myload(curURL.substring(0, lastIndex + 1) + url);
-
-// 	let loadURL = curURL.substring(0, lastIndex + 1) + "#" + url;
-// 	window.history.pushState(null, null, loadURL);
-// })

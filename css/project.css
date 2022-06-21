@@ -111,3 +111,9 @@
   }
 
   
+  .close-button {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 5%;
+  }

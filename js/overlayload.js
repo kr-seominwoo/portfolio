@@ -70,33 +70,9 @@ var navigationSection = function() {
 
 };
 
-var clickMenu = function() {
-
-	$('#navbar a:not([class="external"])').click(function(event){
-		var section = $(this).data('nav-section'),
-			navbar = $('#navbar');
-
-			if ( $('[data-section="' + section + '"]').length ) {
-				$('html, body').animate({
-					scrollTop: $('[data-section="' + section + '"]').offset().top - 55
-				}, 500);
-		   }
-
-		if ( navbar.is(':visible')) {
-			navbar.removeClass('in');
-			navbar.attr('aria-expanded', 'false');
-			$('.js-colorlib-nav-toggle').removeClass('active');
-		}
-
-		event.preventDefault();
-		return false;
-	});
-};
-
 function myload(url) {	
 	// scrollValue = $(document).scrollTop(); 
 	$(".project-overlay").load(url, contentWayPoint);
-	// $(".project-overlay").("display", "block");
 	$(".project-overlay").removeClass("hidden");
 	$("#colorlib-page").addClass("hidden");
 }
@@ -104,23 +80,20 @@ function myload(url) {
 
 function closeOverlay() {
 	let curURL = $(window.location)[0].href;
-	let lastIndex = curURL.lastIndexOf("/");
-	let url = curURL.substring(0, lastIndex);
+	let lastIndex = curURL.lastIndexOf("#");
+	let url = curURL.substring(0, lastIndex - 1);
 
 	window.history.pushState(null, null, url);
 	$(".project-overlay").addClass("hidden");
 	$("#colorlib-page").removeClass("hidden");
 	navigationSection();
 	$('html').animate({scrollTop: $('[data-section="project"]').offset().top - 55}, 10);
-	// setInterval(function() {
-	// 	$('a[data-nav-section="project"').click();
-	// }, 100);	
 }
 
 $("a[name='overlay-projectTest']").click(function(event) {
 	event.preventDefault();
-	console.log('url :' + event.target.href);
-	let url = "project-overlay.html";
+	let target = event.target;
+	let url = target.getAttribute("path");
 	let curURL = $(window.location)[0].href;
 	let lastIndex = curURL.lastIndexOf("/");
 
@@ -129,3 +102,17 @@ $("a[name='overlay-projectTest']").click(function(event) {
 	let loadURL = curURL.substring(0, lastIndex + 1) + "#" + url;
 	window.history.pushState(null, null, loadURL);
 })
+
+// original
+// $("a[name='overlay-projectTest']").click(function(event) {
+// 	event.preventDefault();
+// 	console.log('url :' + event.target.href);
+// 	let url = "project-overlay.html";
+// 	let curURL = $(window.location)[0].href;
+// 	let lastIndex = curURL.lastIndexOf("/");
+
+// 	myload(curURL.substring(0, lastIndex + 1) + url);
+
+// 	let loadURL = curURL.substring(0, lastIndex + 1) + "#" + url;
+// 	window.history.pushState(null, null, loadURL);
+// })

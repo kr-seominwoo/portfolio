@@ -200,11 +200,6 @@
 
 	};
 
-
-
-
-
-
 	var sliderMain = function() {
 		
 	  	$('#colorlib-hero .flexslider').flexslider({

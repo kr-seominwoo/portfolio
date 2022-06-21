@@ -75,6 +75,7 @@ function myload(url) {
 	$(".project-overlay").load(url, contentWayPoint);
 	$(".project-overlay").removeClass("hidden");
 	$("#colorlib-page").addClass("hidden");
+	$('html').animate({scrollTop: 0}, 10);
 }
 
 
@@ -96,7 +97,7 @@ $("a[name='overlay-projectTest']").click(function(event) {
 	let url = target.getAttribute("path");
 	let curURL = $(window.location)[0].href;
 	let lastIndex = curURL.lastIndexOf("/");
-
+	
 	myload(curURL.substring(0, lastIndex + 1) + url);
 
 	let loadURL = curURL.substring(0, lastIndex + 1) + "#" + url;

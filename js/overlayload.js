@@ -110,6 +110,7 @@ function closeOverlay() {
 	window.history.pushState(null, null, url);
 	$(".project-overlay").addClass("hidden");
 	$("#colorlib-page").removeClass("hidden");
+	navigationSection();
 	$('html').animate({scrollTop: $('[data-section="project"]').offset().top - 55}, 10);
 	// setInterval(function() {
 	// 	$('a[data-nav-section="project"').click();

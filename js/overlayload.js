@@ -76,7 +76,6 @@ function myload(url) {
 	// $(".project-overlay").("display", "block");
 	$(".project-overlay").removeClass("hidden");
 	$("#colorlib-page").addClass("hidden");
-	navActive("project");
 }
 
 
@@ -88,8 +87,9 @@ function closeOverlay() {
 	window.history.pushState(null, null, url);
 	$(".project-overlay").addClass("hidden");
 	$("#colorlib-page").removeClass("hidden");
-	// $('html').animate({scrollTop : scrollValue}, 10);
+	// $('html').animate({scrollTop : scrollValue}, 10);	
 	navigationSection();
+	navActive("project");
 }
 
 $("a[name='overlay-projectTest']").click(function(event) {

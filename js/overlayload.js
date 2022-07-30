@@ -71,7 +71,7 @@ var navigationSection = function() {
 
 function myload(url) {	
 	/* project-overlay의 자식들에 애니메이션 추가 */
-	$(".project-overlay").load(url, contentWayPoint);
+	$(".project-overlay").load(url, {projectName : ' '}, contentWayPoint);
 
 	$(".project-overlay").removeClass("hidden");
 	$("#colorlib-page").addClass("hidden");
@@ -95,12 +95,13 @@ function closeOverlay() {
 	$('html').animate({scrollTop: $('[data-section="project"]').offset().top - 55}, 10);
 }
 
-$("a[name='overlay-projectTest']").click(function(event) {
+$("a[name='project-item']").click(function(event) {
 	event.preventDefault();
 	let target = event.target;
 	let url = target.getAttribute("path");
 	let curURL = $(window.location)[0].href;
 	let lastIndex = curURL.lastIndexOf("/");
+
 	
 	myload(curURL.substring(0, lastIndex + 1) + url);
 

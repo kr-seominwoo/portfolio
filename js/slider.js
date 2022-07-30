@@ -2,7 +2,8 @@ $(".next").click(function() {
 
   var img = $('#project-img');
   var src = img.attr("src");
-  var number = Number(img.attr("name"));  
+  var number = Number(img.attr("name"));
+  
 
   console.log(src);
   var fileNum = Number(img.attr("max"));
@@ -11,7 +12,7 @@ $(".next").click(function() {
     ++number;
   }
 
-  const fileName = "images/img-" + number + ".jpg";
+  const fileName = "images/project/img-" + number + ".jpg";
   
   img.attr("src",fileName);
   img.attr("name", number);  
@@ -33,7 +34,7 @@ $(".prev").click(function() {
     number = fileNum - 1;
   }
 
-  const fileName = "images/img-" + number + ".jpg";
+  const fileName = "images/project/img-" + number + ".jpg";
   img.attr("src",fileName);
   img.attr("name", number);  
   img.addClass("hidden");  

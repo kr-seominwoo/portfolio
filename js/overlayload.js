@@ -71,7 +71,7 @@ var navigationSection = function() {
 
 function myload(url) {	
 	/* project-overlay의 자식들에 애니메이션 추가 */
-	$(".project-overlay").load(url, {projectName : ' '}, contentWayPoint);
+	$(".project-overlay").load(url, contentWayPoint);
 
 	$(".project-overlay").removeClass("hidden");
 	$("#colorlib-page").addClass("hidden");

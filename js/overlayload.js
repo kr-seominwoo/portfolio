@@ -83,7 +83,7 @@ function myload(url) {
 function closeOverlay() {
 	let curURL = $(window.location)[0].href;
 	let lastIndex = curURL.lastIndexOf("#");
-	let url = curURL.substring(0, lastIndex - 1);
+	let url = curURL.substring(0, lastIndex);
 
 	window.history.pushState(null, null, url);
 	$(".project-overlay").addClass("hidden");

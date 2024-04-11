@@ -12,7 +12,8 @@ $(".next").click(function() {
     ++number;
   }
 
-  const fileName = "images/project/img-" + number + ".jpg";
+  const projectName = $('#project-name');
+  const fileName = "images/project/" + projectName +  "/img-" + number + ".jpg";
   
   img.attr("src",fileName);
   img.attr("name", number);  
@@ -34,7 +35,8 @@ $(".prev").click(function() {
     number = fileNum - 1;
   }
 
-  const fileName = "images/project/img-" + number + ".jpg";
+  const projectName = $('#project-name');
+  const fileName = "images/project/" + projectName +  "/img-" + number + ".jpg";
   img.attr("src",fileName);
   img.attr("name", number);  
   img.addClass("hidden");  

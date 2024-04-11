@@ -10,7 +10,7 @@ $(".next").click(function() {
   }
 
   const prefixIndex = $('#project-img').attr("src").indexOf("-") + 1;
-  const prefix = $('#project-img').attr("src").substring(prefixIndex);
+  const prefix = $('#project-img').attr("src").substring(0,prefixIndex);
   const fileName = prefix + number + ".jpg";
   
   img.attr("src",fileName);
@@ -32,7 +32,7 @@ $(".prev").click(function() {
   }
 
   const prefixIndex = $('#project-img').attr("src").indexOf("-") + 1;
-  const prefix = $('#project-img').attr("src").substring(prefixIndex);
+  const prefix = $('#project-img').attr("src").substring(0,prefixIndex);
   const fileName = prefix + number + ".jpg";
   img.attr("src",fileName);
   img.attr("name", number);  
